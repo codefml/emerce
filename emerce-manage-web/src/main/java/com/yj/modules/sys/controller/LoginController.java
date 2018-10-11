@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController extends BaseController{
     @RequestMapping(value="/login")
     public String login(){
-        System.out.println(adminPath);
+        logger.info(adminPath);
         return "";
     }
 }
