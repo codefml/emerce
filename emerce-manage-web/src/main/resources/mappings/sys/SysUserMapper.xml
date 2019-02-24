@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yj.modules.sys.dao.SysUserDao">
+    <sql id="sysUserColumns">
+        a.id,
+        <!--a.company_id AS "company.id",-->
+        <!--a.office_id AS "office.id",-->
+        a.login_name,
+        a.password,
+        a.no,
+        a.name,
+        a.email,
+        a.phone,
+        a.mobile,
+        a.user_type,
+        a.login_ip,
+        a.login_flag,
+        a.photo,
+        a.qrcode,
+        a.sign
+        <!--
+        a.remarks,
+        a.create_by AS "createBy.id",
+        a.create_date,
+        a.update_by AS "updateBy.id",
+        a.update_date,
+        a.del_flag-->
+    </sql>
+
+
+
+    <select id="queryList" resultType="com.yj.modules.sys.entity.SysUser">
+        select
+        <include refid="sysUserColumns"/>
+        from sys_user a
+    </select>
+</mapper>
