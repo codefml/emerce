@@ -32,12 +32,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!--spring-boot-starter-tomcat 与servlet-api 冲突
             <exclusions>
                 <exclusion>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                     <groupId>org.springframework.boot</groupId>
                 </exclusion>
             </exclusions>
+            -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,8 +60,15 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
-        -->
-        <!--日志
+-->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--日志-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -75,7 +84,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
-        -->
+
         <!--shiro start-->
         <dependency>
             <groupId>org.apache.shiro</groupId>
@@ -150,26 +159,6 @@
     </dependencies>
 
 
-    <!-- 设定主仓库，按设定顺序进行查找。 -->
-    <repositories>
-
-        <repository>
-            <id>emerce-repos</id>
-            <name>emerce Repository</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <!-- 设定插件仓库 -->
-    <pluginRepositories>
-        <pluginRepository>
-            <id>emerce-repos</id>
-            <name>emerce Repository</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-
     <build>
         <plugins>
             <!--
@@ -189,7 +178,6 @@
                 </configuration>
             </plugin>
                 -->
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
