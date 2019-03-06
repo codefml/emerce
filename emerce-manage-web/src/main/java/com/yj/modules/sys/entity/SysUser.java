@@ -4,7 +4,9 @@ import com.yj.common.persistence.DataEntity;
 
 import java.io.Serializable;
 
-
+/**
+ * 系统用户对象
+ */
 //public class SysUser extends DataEntity<SysUser> {
 public class SysUser implements Serializable {
     private static final long serialVersionUID = 8109259543299360927L;
