@@ -1,5 +1,6 @@
 package com.yj.modules.sys.entity;
 
+import com.yj.common.persistence.BaseEntity;
 import com.yj.common.persistence.DataEntity;
 
 import java.io.Serializable;
@@ -8,9 +9,8 @@ import java.io.Serializable;
  * 系统用户对象
  */
 //public class SysUser extends DataEntity<SysUser> {
-public class SysUser implements Serializable {
+public class SysUser extends BaseEntity  {
     private static final long serialVersionUID = 8109259543299360927L;
-    private String id;
     private String loginName;// 登录名
     private String password;// 密码
     private String no;        // 工号
@@ -26,13 +26,7 @@ public class SysUser implements Serializable {
     private String sign;//签名
 
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getLoginName() {
         return loginName;
