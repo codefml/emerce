@@ -1,10 +1,17 @@
 package com.yj.modules.sys.service;
 
+import com.yj.modules.sys.dao.SysUserDao;
 import com.yj.modules.sys.entity.SysUser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface SysUserService {
-
-    List<SysUser> queryList();
+@Service
+public class SysUserService  {
+    @Autowired
+    SysUserDao sysUserDao;
+    public List<SysUser> queryList() {
+        return sysUserDao.queryList();
+    }
 }
