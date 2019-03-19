@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller(value = "sysUser")
+@Controller( value="/a")
 //@RestController
 //@RequestMapping(value="${adminPath}")
 public class LoginController {
@@ -20,7 +20,7 @@ public class LoginController {
 
 
     @RequestMapping(value="/logintest")
-    public String login(){
+    public String loginTest(){
         List<SysUser> list=sysUserService.queryList();
         for(SysUser sysUser:list){
             System.out.println(sysUser.getLoginName());
@@ -29,6 +29,16 @@ public class LoginController {
         return "";
     }
 
+
+    @RequestMapping(value="/login")
+    public String login(){
+        List<SysUser> list=sysUserService.queryList();
+        for(SysUser sysUser:list){
+            System.out.println(sysUser.getLoginName());
+        }
+        System.out.println("bbbbbb");
+        return "";
+    }
 
 
 
