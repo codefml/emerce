@@ -9,17 +9,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller(value = "sysUser")
+@Controller
 //@RestController
+@RequestMapping(value = "sysUser")
 //@RequestMapping(value="${adminPath}")
 public class LoginController {
     @Autowired
     SysUserService sysUserService;
 
+    @RequestMapping(value="/loginTest")
+    public String loginAAA(){
+        System.out.println("bbbbbb");
+        return "index";
+    }
+
+    @RequestMapping(value="/login1")
+    public String loginTest(){
+        System.out.println("bbbbbb");
+        return "";
+    }
 
 
-
-    @RequestMapping(value="/logintest")
+    @RequestMapping(value="/login")
     public String login(){
         List<SysUser> list=sysUserService.queryList();
         for(SysUser sysUser:list){
