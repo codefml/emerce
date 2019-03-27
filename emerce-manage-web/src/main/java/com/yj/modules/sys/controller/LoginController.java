@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Controller
+
 //@RestController
 @RequestMapping(value = "sysUser")
 //@RequestMapping(value="${adminPath}")
@@ -23,8 +24,16 @@ public class LoginController {
         return "index";
     }
 
-    @RequestMapping(value="/login1")
+
+
+
+
+    @RequestMapping(value="/logintest")
     public String loginTest(){
+        List<SysUser> list=sysUserService.queryList();
+        for(SysUser sysUser:list){
+            System.out.println(sysUser.getLoginName());
+        }
         System.out.println("bbbbbb");
         return "";
     }
@@ -39,7 +48,6 @@ public class LoginController {
         System.out.println("bbbbbb");
         return "";
     }
-
 
 
 

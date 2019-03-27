@@ -5,6 +5,9 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
+
+import javax.annotation.Resources;
 
 /**
  * 方式一：默认的application启动，在创建项目时自动生成application启动类，直接run执行即可
