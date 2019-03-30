@@ -11,11 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-login
-<form>
-    <input type="text" name="name" value=""/>
-    <input type="password" name="password" value=""/>
-    <input type="submit" name="submit"/>
-</form>
+login success
+
 </body>
 </html>

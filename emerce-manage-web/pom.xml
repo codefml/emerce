@@ -73,6 +73,24 @@
             <scope>provided</scope>
         </dependency>
         -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <!--日志-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -181,6 +199,10 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.4.14.v20181114</version>
                 <configuration>
+                    <modules>
+                        <module>apache-jsp</module>
+                        <module>apache-jstl</module>
+                    </modules>
                     <httpConnector>
                         <port>9090</port>
                     </httpConnector>

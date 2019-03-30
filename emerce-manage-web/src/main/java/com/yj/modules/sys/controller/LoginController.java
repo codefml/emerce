@@ -21,7 +21,7 @@ public class LoginController {
     @RequestMapping(value="/loginTest")
     public String loginAAA(){
         System.out.println("bbbbbb");
-        return "index";
+        return "pages/sys/index";
     }
 
 
