@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ConfigComponent {
-//    @Value("${admnPath}")
-//    public String adminPath;
+    @Value("${adminPath}")
+    public String adminPath;
 }

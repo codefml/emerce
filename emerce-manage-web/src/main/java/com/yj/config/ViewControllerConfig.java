@@ -16,12 +16,9 @@ public class ViewControllerConfig extends WebMvcConfigurationSupport {
      */
     @Override
     public  void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/").setViewName("/index");
-//        registry.addViewController("").setViewName("/login");
-        //super.addViewControllers(registry);
-//        super.addResourceHandlers();
-//        super.addInterceptors();
-
+        registry.addViewController("/").setViewName("/index");
+        registry.addViewController("").setViewName("/index");
+        super.addViewControllers(registry);
     }
 
     /**
@@ -40,6 +37,11 @@ public class ViewControllerConfig extends WebMvcConfigurationSupport {
     public void addInterceptors(InterceptorRegistry registry){
         super.addInterceptors(registry);
     }
+
+    /**
+     * 设置资源解析器
+     * @return
+     */
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver resolver=new InternalResourceViewResolver();
