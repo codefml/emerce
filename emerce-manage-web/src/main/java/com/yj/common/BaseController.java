@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:system.properties")
 public abstract class BaseController {
     public static Logger logger= LoggerFactory.getLogger(Class.class);
-    @Value("${adminPath}")
-    public String adminPath;
+//    @Value("${adminPath}")
+//    public String adminPath;
 }
