@@ -13,11 +13,10 @@
 </head>
 <body>
 <form method="post" action="/sysUser/loginTest" >
-    <input type="text" name="name" value="" placeholder="name"/>
+    <input type="text" name="name" value="" placeholder="name"/>aaa
     <input type="password" name="password" value="" placeholder="password"/>
     <input type="submit" name="submit"/>
 </form>
-    <%=pageContext.getRequest().getServletContext().getContextPath()%>--------
-<%=pageContext.getServletContext().getContextPath()%>
+
 </body>
 </html>
