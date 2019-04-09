@@ -34,4 +34,10 @@
         <include refid="sysUserColumns"/>
         from sys_user a
     </select>
+
+    <select id="queryByLoginName" resultType="com.yj.modules.sys.entity.SysUser" parameterType="SysUser">
+        select
+        <include refid="sysUserColumns"/>
+        from sys_user a where a.login_name=#{loginName} and a.del_flag=0
+    </select>
 </mapper>

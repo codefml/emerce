@@ -7,4 +7,6 @@ import java.util.List;
 @Mapper
 public interface SysUserDao {
     List<SysUser> queryList();
+
+    SysUser queryByLoginName(SysUser sysUser);
 }

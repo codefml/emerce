@@ -41,12 +41,13 @@ public class LoginController {
 
     @RequestMapping(value="/login")
     public String login(){
-        List<SysUser> list=sysUserService.queryList();
-        for(SysUser sysUser:list){
-            System.out.println(sysUser.getLoginName());
-        }
+        String loginName="admin";
+        SysUser loginUser=new SysUser();
+        loginUser.setLoginName(loginName);
+        SysUser user=sysUserService.queryByLoginName(loginUser);
+
         System.out.println("bbbbbb");
-        return "";
+        return "pages/sys/index";
     }
 
 

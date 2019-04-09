@@ -15,7 +15,7 @@ public class SysUserService  {
         return sysUserDao.queryList();
     }
 
-    public SysUser queryByLoginName(){
-        return null;
+    public SysUser queryByLoginName(SysUser sysUser){
+        return sysUserDao.queryByLoginName(sysUser);
     }
 }

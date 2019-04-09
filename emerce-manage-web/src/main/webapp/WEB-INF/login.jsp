@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="/sysUser/loginTest" >
+<form method="post" action="/sysUser/login" >
     <input type="text" name="name" value="" placeholder="name"/>aaa
     <input type="password" name="password" value="" placeholder="password"/>
     <input type="submit" name="submit"/>

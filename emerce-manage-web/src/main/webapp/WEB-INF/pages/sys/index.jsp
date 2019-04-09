@@ -13,5 +13,10 @@
 <body>
 login success
 <myTag></myTag>
+
+<div class="content" id="content">
+    <div class="leftContent" id="leftContent"></div>
+    <div class="rightContent" id="rightContent"></div>
+</div>
 </body>
 </html>
