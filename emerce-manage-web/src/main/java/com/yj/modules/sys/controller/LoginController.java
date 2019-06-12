@@ -1,5 +1,6 @@
 package com.yj.modules.sys.controller;
 
+import com.yj.common.utils.SecurityUtil;
 import com.yj.modules.sys.entity.SysUser;
 import com.yj.modules.sys.service.SysUserService;
 import org.slf4j.Logger;
@@ -50,9 +51,12 @@ public class LoginController {
         SysUser loginUser=new SysUser();
         loginUser.setLoginName(loginName);
         SysUser user=sysUserService.queryByLoginName(loginUser);
-        if(user.getPassword().equals(user.getPassword())){
+
+        if(SecurityUtil.validataPassword(password,user.getPassword())){
+            logger.info("validata true");
+        }else{
+            logger.info("validata false");
         }
-        System.out.println("bbbbbb");
         return "pages/sys/index";
     }
 
