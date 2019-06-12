@@ -7,6 +7,6 @@ public class SiteMeshFilter extends ConfigurableSiteMeshFilter{
 
     @Override
     protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
-        builder.addDecoratorPath("/*","/decorator/default").addExcludedPath("/static/**");
+        //builder.addDecoratorPath("/*","/decorator/default").addExcludedPath("/static/**");
     }
 }

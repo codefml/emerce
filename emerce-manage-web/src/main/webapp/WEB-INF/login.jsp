@@ -1,22 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/3/19
-  Time: 16:28
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html >
 <head>
-    <title>Title</title>
+    <!--
+    <meta  http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    -->
+    <title>login</title>
 </head>
 <body>
 <form method="post" action="/sysUser/login" >
-    <input type="text" name="name" value="" placeholder="name"/>aaa
-    <input type="password" name="password" value="" placeholder="password"/>
+    用户名：<input type="text" id="loginName" name="loginName" value="" placeholder="loginName"/>
+    <br/>
+    密码：<input type="password" id="password" name="password" value="" placeholder="password"/>
+    <br/>
     <input type="submit" name="submit"/>
 </form>
-
 </body>
 </html>
